@@ -57,8 +57,8 @@ Route::middleware('auth')->group(function () {
     Route::get('password/confirm', Confirm::class)
         ->name('password.confirm');
 
-    Route::prefix('painel')->group(function () {
-        Route::get('/', Painel::class)->name('painel');
+    Route::prefix('__painel')->group(function () {
+        Route::get('/', Painel::class)->name('painelTeste');
     });
 });
 
