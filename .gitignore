@@ -1,11 +1,11 @@
-/.phpunit.cache
-/node_modules
-/public/build
-/public/hot
-/public/storage
-/storage/*.key
-/storage/pail
-/vendor
+# Laravel
+.phpunit.cache
+public/build
+public/hot
+public/storage
+storage/*.key
+storage/pail
+vendor
 .env
 .env.backup
 .env.production
@@ -14,10 +14,20 @@
 Homestead.json
 Homestead.yaml
 auth.json
+
+# Editor
+.fleet
+.idea
+.nova
+.vscode
+.zed
+
+# Node
+node_modules
 npm-debug.log
 yarn-error.log
-/.fleet
-/.idea
-/.nova
-/.vscode
-/.zed
+package-lock.json
+yarn-lock.json
+
+# Docker
+.docker/dbdata/*
