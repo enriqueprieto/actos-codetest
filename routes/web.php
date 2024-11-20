@@ -8,6 +8,7 @@ use App\Livewire\Auth\Passwords\Email;
 use App\Livewire\Auth\Passwords\Reset;
 use App\Livewire\Auth\Register;
 use App\Livewire\Auth\Verify;
+use App\Livewire\Painel;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,12 +24,23 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('home');
 
-Route::middleware('guest')->group(function () {
-    Route::get('login', Login::class)
-        ->name('login');
+Route::prefix('minha-conta')->group(function () {
+    Route::middleware('guest')->group(function () {
+        Route::get('entrar', Login::class)
+            ->name('login');
 
-    Route::get('register', Register::class)
-        ->name('register');
+        Route::get('criar', Register::class)
+            ->name('register');
+    });
+
+    Route::middleware('auth')->group(function () {
+        Route::get('email/verify/{id}/{hash}', EmailVerificationController::class)
+            ->middleware('signed')
+            ->name('verification.verify');
+
+        Route::get('sair', LogoutController::class)
+            ->name('logout');
+    });
 });
 
 Route::get('password/reset', Email::class)
@@ -44,13 +56,10 @@ Route::middleware('auth')->group(function () {
 
     Route::get('password/confirm', Confirm::class)
         ->name('password.confirm');
+
+    Route::prefix('painel')->group(function () {
+        Route::get('/', Painel::class)->name('painel');
+    });
 });
 
-Route::middleware('auth')->group(function () {
-    Route::get('email/verify/{id}/{hash}', EmailVerificationController::class)
-        ->middleware('signed')
-        ->name('verification.verify');
 
-    Route::post('logout', LogoutController::class)
-        ->name('logout');
-});
