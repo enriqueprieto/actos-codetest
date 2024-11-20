@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgis/postgis:14-3.2
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - laravel_network
+volumes:
+  pgdata:
+
+networks:
+  laravel_network:
