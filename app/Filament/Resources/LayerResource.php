@@ -64,8 +64,8 @@ class LayerResource extends Resource
     {
         return [
             'index' => Pages\ListLayers::route('/'),
-            'create' => Pages\CreateLayer::route('/create'),
-            'edit' => Pages\EditLayer::route('/{record}/edit'),
+            'create' => Pages\CreateLayer::route('/novo'),
+            'edit' => Pages\EditLayer::route('/{record}/editar'),
         ];
     }
 }
