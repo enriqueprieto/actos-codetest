@@ -4,21 +4,20 @@
 
     <div class="flex justify-between py-4 px-2">
         <h1>Mapa com ArcGIS</h1>
-        @if (Route::has('login'))
-            <div class="flex items-center">
-                @auth
-                    <a href="/painel" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-500">Painel</a>
-                    <form id="logout-form" action="/painel/logout" method="POST" class="inline">
-                        @csrf
-                        <button type="submit" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-500">
-                            Sair
-                        </button>
-                    </form>
-                @else
-                    <a href="/painel/login" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-500">Log in</a>
-                @endauth
-            </div>
-        @endif
+        <div class="flex items-center">
+            @auth
+                <a href="/painel" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-500">Painel</a>
+                <form id="logout-form" action="/painel/logout" method="POST" class="inline">
+                    @csrf
+                    <button type="submit" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-500">
+                        Sair
+                    </button>
+                </form>
+            @else
+                <a href="/painel/login" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-500">Entrar</a>
+                <a href="/painel/criar" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-500">Criar conta</a>
+            @endauth
+        </div>
     </div>
 
 

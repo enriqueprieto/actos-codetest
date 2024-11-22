@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WelcomeController::class, 'index'])->name('home');
 
-Route::prefix('minha-conta')->group(function () {
+Route::prefix('painel')->group(function () {
     Route::middleware('guest')->group(function () {
         Route::get('entrar', Login::class)
             ->name('login');
