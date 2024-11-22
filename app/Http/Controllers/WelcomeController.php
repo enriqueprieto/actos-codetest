@@ -42,8 +42,11 @@ class WelcomeController extends Controller
                 });
 
             $firstLayer = $layers->first();
-            $firstPolygonCoordinates = $firstLayer['features'][0]['geometry']->coordinates[0];
-            $centerCoordinates = $firstPolygonCoordinates[0];
+
+            if ($firstLayer) {
+                $firstPolygonCoordinates = $firstLayer['features'][0]['geometry']->coordinates[0];
+                $centerCoordinates = $firstPolygonCoordinates[0];
+            }
         }
 
         return view('welcome', ['layers' => $layers, 'center' => $centerCoordinates]);

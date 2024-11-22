@@ -25,7 +25,7 @@ Antes de irmos para a instalação do projeto, precisamos fazer algumas verifica
 
 Neste projeto você consegue rodar-lo de 2(duas) formas diferente: automatizado e manual. Irei mostrar e explicar cada uma.
 
-![](https://www.loom.com/share/eebf0f805f954b0b9c78d2dfb9793a9a?sid=6710e7cf-1214-415d-9173-aaf1e5842947)
+[Vídeo explicando como rodar o projeto](https://www.loom.com/share/eebf0f805f954b0b9c78d2dfb9793a9a?sid=453a028e-fbca-4fb5-8c40-90da26ab3fe0)
 
 ### Automatizado
 
@@ -102,6 +102,8 @@ Se ocorrer tudo certo com a execução do comando você poderá acessar a aplica
 
 ## Features
 
+[Video apresentando o sitema e painel](https://www.loom.com/share/4c8e253d54744edf8c8a435da600e30c?sid=76c05e7f-af4c-46a5-ac98-a56f9fdb66ee)
+
 ### Página inicial
 
 Na página inicial será exibido uma tela parecida com o screenshot abaixo:
@@ -126,6 +128,7 @@ Caso você esteja já logado será exibido links para acessar o painel e sair da
 
 
 ![Página do painel layers](./docs/assets/painel_layer_list.png)
+[Video apresentando as layers](https://www.loom.com/share/695726e953b84aedb5b78134e3762a05?sid=8427e26f-f5ad-4637-ad81-a2d25acd7d95)
 
 #### Criar layer
 
