@@ -44,7 +44,7 @@ Mas caso queria rodar o projeto de forma manual, siga os passos abaixo
 
 ### Manual
 
-### Variável de ambiente
+#### Variável de ambiente
 
 Caso tenha acabado de baixar o projeto, o arquivo `.env` não estará presente no projeto. Este arquivo é crucial para funcionamento da aplicação. Copie o arquivo `.env.example` ou rode o seguinte comando:
 
