@@ -22,9 +22,12 @@
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
     </head>
 
     <body>
         @yield('body')
+
+        <script src="https://js.arcgis.com/4.28/"></script>
     </body>
 </html>
