@@ -96,3 +96,78 @@ php artisan serve & npm run dev
 ```
 
 Se ocorrer tudo certo com a execução do comando você poderá acessar a aplicação pela URL: [http://localhost:8000](http://localhost:8000).
+
+
+## Features
+
+### Página inicial
+
+Na página inicial será exibido uma tela parecida com o screenshot abaixo:
+
+![Página inicial](./docs/assets/homepage.png)
+
+Caso você esteja já logado será exibido links para acessar o painel e sair da conta. Mas caso você esteja deslogado, será exibido links de **"Entrar"** e **"Criar conta"**
+
+### Login
+
+![Página de login](./docs/assets/painel_login.png)
+
+### Criar conta
+
+![Página de criar conta](./docs/assets/painel_criar.png)
+
+### Painel
+
+![Página do painel](./docs/assets/painel.png)
+
+### Layers
+
+
+![Página do painel layers](./docs/assets/painel_layer_list.png)
+
+#### Criar layer
+
+Para criar uma nova layer, clique em "New layer"
+
+![Página do painel layers](./docs/assets/painel_layer_create.png)
+
+Será preciso informar o nome da layer e um GeoJSON. Segue abaixo um exemplo de GeoJSON:
+
+```json
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-44.4131, -14.7802],
+            [-42.9998, -14.7393],
+            [-42.1993, -13.5077],
+            [-41.3246, -12.6014],
+            [-41.1889, -11.6075],
+            [-41.4676, -11.1876],
+            [-41.6242, -10.3657],
+            [-42.2799, -10.2355],
+            [-43.3638, -10.6391],
+            [-44.3534, -11.7463],
+            [-45.1892, -12.5957],
+            [-45.3965, -13.4536],
+            [-44.4131, -14.7802]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Estado da Bahia"
+      }
+    }
+  ]
+}
+
+```
+
+Após cadastrar, podemos ir para a página inicial. Clicando no link "Visualizar Mapa" será exibido os polygonal no mapa. Segue um exemplo no screenshot abaixo:
+
+![Página do painel layers](./docs/assets/home_logado.png)
