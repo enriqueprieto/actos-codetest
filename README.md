@@ -25,6 +25,8 @@ Antes de irmos para a instalação do projeto, precisamos fazer algumas verifica
 
 Neste projeto você consegue rodar-lo de 2(duas) formas diferente: automatizado e manual. Irei mostrar e explicar cada uma.
 
+![](https://www.loom.com/share/eebf0f805f954b0b9c78d2dfb9793a9a?sid=6710e7cf-1214-415d-9173-aaf1e5842947)
+
 ### Automatizado
 
 Para tornar a experiência de desenvolvimento mais leve, criei um arquivo chamado `start-app.sh` que se encontra na raíz deste repositório. Basta executar o seguinte comando:
