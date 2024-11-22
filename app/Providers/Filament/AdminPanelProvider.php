@@ -5,6 +5,7 @@ namespace App\Providers\Filament;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\NavigationItem;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -53,6 +54,13 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            ->navigationItems([
+                // Adicionando o link "Visualizar mapa"
+                NavigationItem::make('Visualizar mapa')
+                    ->url('/') // URL para redirecionar
+                    ->icon('heroicon-o-map') // Ícone opcional
+                    ->sort(0), // Ordem de exibição
             ]);
     }
 }
